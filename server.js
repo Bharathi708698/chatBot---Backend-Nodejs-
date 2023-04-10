@@ -22,7 +22,7 @@ app.post('/chat',async (req, res) => {
         messages: [{ role: "user", content: message}],
         max_tokens: 4000,
     });
-    console.log(completion.data.choices[0].message)
+    
     res.send(completion.data.choices[0].message.content)
 });
 
